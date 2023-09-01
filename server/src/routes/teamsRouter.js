@@ -1,10 +1,9 @@
 const { Router } = require("express");
 
+const { getTeamsHandler } = require("../handlers/teamsHandlers");
+
 const teamsRouter = Router();
 
-teamsRouter.get("/", (req,res) => {
-    res.send("NIY: Esta ruta trae la info de todos los teams");
-});
-
+teamsRouter.get("/",  getTeamsHandler);
 
 module.exports = teamsRouter;
